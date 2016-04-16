@@ -1,0 +1,30 @@
+{
+  "name": "thepark",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adam-Lipshay/thePark.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adam-Lipshay/thePark/issues"
+  },
+  "homepage": "https://github.com/Adam-Lipshay/thePark#readme",
+  "dependencies": {
+    "angular": "^1.5.3",
+    "angular-animate": "^1.5.3",
+    "angular-aria": "^1.5.3",
+    "angular-material": "^1.0.7",
+    "angular-messages": "^1.5.3",
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "mongo": "^0.1.0",
+    "mongoose": "^4.4.12"
+  }
+}
