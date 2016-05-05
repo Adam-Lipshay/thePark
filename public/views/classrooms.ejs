@@ -1,0 +1,19 @@
+<div layout="row" layout-align="center center" ng-controller="ClassroomsController" class="padding-top">
+	<div flex-xs="100" flex-gt-xs="90" flex-gt-sm="80" flex-gt-md="70" flex-gt-lg="50" id="container-flex">
+		<span class="md-headline-padding">All Classes</span>
+		<md-card>
+			<md-list id="list-classrooms">
+				<md-list-item ng-href="/classroom" ng-repeat="class in classes" class="md-2-line" style="background-image: linear-gradient(to right, rgba(0,0,0,.6), rgba(0,0,0,0)), url('{{class.cover}}');" md-ink-ripple="#fff">
+					<img ng-src="{{user.photo}}" class="md-avatar" alt="{{class.teacher.gender=='m' ? 'Mr. ' : 'Ms. ' + class.teacher.lname}}"/>
+					<div class="md-list-item-text white-text">
+						<h3>{{class.name}}</h3>
+						<p>{{(class.teacher.gender=='m' ? 'Mr. ' : 'Ms. ') + class.teacher.lname}} - {{(class.period | ordinal) + ' block'}} {{class.ab ? (', ' + (class.ab | uppercase) + ' day') : ''}}</p>
+					</div>
+				</md-list-item>
+			<md-button id="button-joinClass" class="md-fab on-seam right" ng-click="joinClass()" aria-label="Join classroom">
+        		<md-icon class="material-icons">add</md-icon>
+        	</md-button>
+			</md-list>
+		</md-card>
+	</div>
+</div>

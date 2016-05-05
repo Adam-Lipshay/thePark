@@ -1,0 +1,76 @@
+md-toolbar#toolbar-main {
+    position: absolute;
+    box-shadow: none !important;
+    background-color: rgba(0,0,0,0) !important;
+}
+
+.logo {
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-size: 55pt;
+    color: #333;
+    text-shadow: 0px 2px 1px rgba(80, 255, 80, 1);
+}
+.title {
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-size: 30pt;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.34);
+}
+.subtitle {
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-size: 22pt;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.description {
+    font-size: 14pt;
+    text-align: center;
+    max-width: 800px;
+}
+
+.section {
+    height: 100vh;
+    padding-top: calc(50vh - 200px);
+}
+
+#jumbo {
+    background-image: url('https://i.imgur.com/9gdmvDn.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.transparent {
+    background-color: #fff;
+    background-color: rgba(255,255,255,.5) !important;
+}
+
+#content-1 {
+    background-image: url('https://i.imgur.com/V4MBb8v.png');
+    background-position: center;
+    background-size: cover;
+}
+#content-1 #devices {
+    width: 80%;
+    max-width: 400px;
+    bottom: 0;
+}
+
+form[name=registerForm] md-input-container,
+form[name=loginForm] md-input-container {
+     width: 100%;
+}
+
+#form-signin-label-or {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: rgb(250,250,250);
+    border: solid 5px rgb(250,250,250);
+    text-transform: uppercase;
+}
+
+#button-signin-google {
+    padding: 0px 12px;
+    text-transform: none;
+}
+#button-signin-google md-icon svg {
+    width: 18px; height: 18px;
+    transform: translateY(3px); padding-right: 6px
+}

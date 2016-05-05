@@ -1,0 +1,15 @@
+#container-flex {
+	overflow: visible;
+	position: relative;
+}
+#list-classrooms {
+	padding: 0;
+}
+#list-classrooms md-list-item {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+#list-classrooms md-list-item .md-list-item-inner {
+	padding: 10px 10px;
+}

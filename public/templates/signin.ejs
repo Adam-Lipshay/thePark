@@ -1,0 +1,86 @@
+<md-dialog aria-label="Log In or Sign Up">
+    <md-dialog-content style="max-width:800px;max-height:810px; ">
+        <md-tabs md-selected="selectedIndex" md-dynamic-height md-border-bottom>
+            <md-tab label="Sign In">
+                <md-content class="md-padding">
+                    <form name="loginForm" ng-submit="login()" layout-gt-sm="column">
+                        <md-input-container>
+                            <label ng-model="selectedIndex">Username</label>
+                            <input type="text" ng-model="loginForm.username">
+                        </md-input-container>
+                        <md-input-container>
+                            <label>Password</label>
+                            <input type="password" ng-model="loginForm.password">
+                        </md-input-container>
+                        <div layout-gt-sm="row">
+                            <md-button type="submit" class="md-raised md-primary">Log In</md-button>
+                            <md-button disabled="true">Forgot Password</md-button>
+                        </div>
+                    </form>
+                </md-content>
+            </md-tab>
+            <md-tab label="Join">
+                <md-content class="md-padding">
+                    <form name="registerForm" ng-submit="register()" layout-gt-sm="column">
+                        <div layout-gt-sm="row">
+                            <md-input-container>
+                                <label>First Name</label>
+                                <input required type="text" ng-model="registerForm.name.first">
+                            </md-input-container>
+                            <md-input-container>
+                                <label>Last Name</label>
+                                <input required type="text" ng-model="registerForm.name.last">
+                            </md-input-container>
+                        </div>
+                        
+                        <div layout-gt-sm="row">
+                            <md-input-container>
+                                <label>Email</label>
+                                <input required type="email" ng-model="registerForm.email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$">
+                            </md-input-container>
+                            <md-input-container>
+                                <label>Username</label>
+                                <input required type="text" ng-model="registerForm.username">
+                            </md-input-container>
+                        </div>
+                        
+                        <div layout-gt-sm="row">
+                            <md-input-container>
+                                <label>Password</label>
+                                <input required type="password" ng-model="registerForm.password.original">
+                            </md-input-container>
+                            <md-input-container>
+                                <label>Confirm Password</label>
+                                <input required type="password" ng-model="registerForm.password.confirm">
+                            </md-input-container>
+                        </div>
+                        
+                        <md-radio-group layout="row" ng-model="registerForm.gender">
+                            <md-radio-button value="male" class="md-primary">Male</md-radio-button>
+                            <md-radio-button value="female" class="md-primary">Female</md-radio-button>
+                        </md-radio-group>
+                        
+                        <br/>
+                        
+                        <div layout-gt-sm="row">
+                            <md-button type="submit" class="md-raised md-primary">Sign Up</md-button>
+                        </div>
+                    </form>
+                </md-content>
+            </md-tab>
+        </md-tabs>
+        <md-content class="md-padding">
+            <span layout="row" layout-align="center center">
+                <span id="form-signin-label-or">Or</span>
+            </span>
+            <md-divider></md-divider>
+            <br>
+            <span layout="row" layout-align="center center">
+                <md-button id="button-signin-google" ng-click="loginGoogle()" class="md-raised">
+                    <md-icon md-svg-src="res/svg/google-icon.svg"></md-icon>
+                    Sign in with Google
+                </md-button>
+            </span>
+        </md-content>
+    </md-dialog-content>
+</md-dialog>

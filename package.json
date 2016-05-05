@@ -1,30 +1,32 @@
 {
   "name": "thepark",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Adam-Lipshay/thePark.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Adam-Lipshay/thePark/issues"
-  },
-  "homepage": "https://github.com/Adam-Lipshay/thePark#readme",
+  "main": "server.js",
   "dependencies": {
     "angular": "^1.5.3",
     "angular-animate": "^1.5.3",
     "angular-aria": "^1.5.3",
+    "angular-css": "^1.0.7",
     "angular-material": "^1.0.7",
     "angular-messages": "^1.5.3",
-    "body-parser": "^1.15.0",
-    "express": "^4.13.4",
-    "mongo": "^0.1.0",
-    "mongoose": "^4.4.12"
+    "angular-route": "^1.5.3",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.4.3",
+    "bower": "^1.7.9",
+    "bson": "^0.4.23",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.1",
+    "ejs": "^2.4.1",
+    "express": "~4.5.1",
+    "express-session": "^1.13.0",
+    "method-override": "~2.0.2",
+    "mongodb": "^2.1.16",
+    "mongoose": "~4.4.12",
+    "morgan": "^1.7.0",
+    "node-sass": "^3.4.2",
+    "passport": "^0.3.2",
+    "passport-google-oauth": "^1.0.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^1.0.0",
+    "socket.io": "^1.4.5"
   }
 }

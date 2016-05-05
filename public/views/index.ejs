@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<base href="/">
+
+	<title>The Park</title>
+
+	<!-- Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Custom styles -->
+	<link rel="stylesheet" href="https://cdn.rawgit.com/angular/bower-material/master/angular-material.min.css"></script><!-- Angular Material -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><!-- Material Icons -->
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Product+Sans' type='text/css'><!-- Product Sans Font -->
+	
+	<!-- JS (cdn) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-animate.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-aria.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-messages.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+	<script src="https://cdn.rawgit.com/angular/bower-material/master/angular-material.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-css/1.0.8/angular-css.js"></script>
+	<script src="https://craig.global.ssl.fastly.net/js/mousetrap/mousetrap.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+	<script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+	<script src="https://cdn.rawgit.com/btford/angular-socket-io/master/socket.js"></script>
+
+	<!-- JS (local) -->
+	<!-- <script src="js/node_modules/angular/angular.min.js"></script> -->
+	<!-- <script src="js/node_modules/angular-animate/angular-animate.min.js"></script> -->
+	<!-- <script src="js/node_modules/angular-aria/angular-aria.min.js"></script> -->
+	<!-- <script src="js/node_modules/angular-messages/angular-messages.min.js"></script> -->
+	<!-- <script src="js/node_modules/angular-route/angular-route.min.js"></script> -->
+	<!-- <script src="js/node_modules/angular-material/angular-material.min.js"></script> -->
+	<!-- <script src="https://craig.global.ssl.fastly.net/js/mousetrap/mousetrap.min.js"></script> -->
+	<!-- <script src="js/node_modules/mongoose/node_modules/ms/test/support/jquery.js"></script> --> 
+
+	<!-- ANGULAR CUSTOM -->
+	<script src="js/filters.js"></script>
+	<script src="js/appRoutes.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/controllers/HomeCtrl.js"></script>
+	<script src="js/controllers/ProfileCtrl.js"></script>
+	<script src="js/controllers/ClassroomsCtrl.js"></script>
+	<script src="js/controllers/ChatCtrl.js"></script>
+	<script src="js/controllers/SettingsCtrl.js"></script>
+	<script src="js/services/AuthService.js"></script>
+</head>
+<body ng-app="thepark" ng-controller="AppCtrl" ng-init="init()">
+<div class="container" ng-controller="NavCtrl">
+	
+	<!-- Toolbar -->
+	<md-toolbar id="toolbar-main" class="md-whiteframe-1dp">
+		<div class="md-toolbar-tools">
+			<md-button class="md-icon-button" ng-click="openSideNav()" aria-label="Settings">
+				<md-icon class="material-icons">menu</md-icon>
+			</md-button>
+			<h2>
+				<span>The Park</span>
+			</h2>
+			<span flex></span>
+
+			<md-menu md-position-mode="target-right target">
+				<md-button class="md-icon-button" aria-label="Notifications"ng-click="openMenu($mdOpenMenu, $event)">
+					<md-icon class="material-icons">notifications_none</md-icon>
+				</md-button>
+				<md-menu-content width="4" style="padding: 0;">
+					<!-- <md-menu-item>
+						<md-button ng-click="ctrl.redial($event)">asdf</md-button>
+					</md-menu-item> -->
+					<md-list class="md-dense" flex style="padding: 0;">
+						<md-subheader class="md-no-sticky">Notifications</md-subheader>
+						<md-list-item class="md-3-line" ng-repeat="item in todos">
+							<img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
+							<div class="md-list-item-text" layout="column">
+								<h3>{{ item.who }}</h3>
+								<h4>{{ item.what }}</h4>
+								<p>{{ item.notes }}</p>
+							</div>
+						</md-list-item>
+					</md-list>
+				</md-menu-content>
+			</md-menu>
+		</div>
+	</md-toolbar>
+
+	<div layout="row">
+		<md-sidenav
+			class="md-sidenav-left md-whiteframe-2dp"
+			md-component-id="left">
+			<md-toolbar></md-toolbar>
+			<md-content>
+				<md-list>
+					<div ng-repeat="item in navLinks">
+						<md-list-item ng-if="item!=='divider'" ng-click="navigate(item.url); closeSideNav();">
+							<md-icon class="material-icons">{{item.icon}}</md-icon>
+							<p>{{item.text}}</p>
+						</md-list-item>
+						<md-divider ng-if="item==='divider'"></md-divider>
+					</div>
+				</md-list>
+			</md-content>
+		</md-sidenav>
+
+		<!-- Angular dynamic content -->
+		<div ng-view class="fade-in page-transition hero-transition" flex="100"></div>
+	</div>
+</div>
+</body>
+</html>

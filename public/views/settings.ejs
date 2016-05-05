@@ -1,0 +1,67 @@
+<div layout="row" layout-align="center center" ng-controller="SettingsController" class="padding-top">
+	<div flex-xs="100" flex-gt-xs="90" flex-gt-sm="60" flex-gt-md="50" flex-gt-lg="30" id="container-flex">
+		<md-card>
+				<!-- <h2 class="md-title md-primary">General</h2> -->
+				<md-list>
+					<md-subheader class="md-no-sticky">General</md-subheader>
+						<md-list-item>
+							<p>Safe filter</p>
+							<md-switch class="md-secondary" ng-model="setting.filter"></md-switch>
+						</md-list-item>
+						<md-list-item>
+							<p>Recieve emails</p>
+							<md-switch class="md-secondary" ng-model="setting.email"></md-switch>
+						</md-list-item>
+				</md-list>
+			</md-card>
+			<md-card>
+				<md-list>
+					<md-subheader class="md-no-sticky">Account</md-subheader>
+						<md-list-item>
+							<p>Email</p>
+							<span flex></span>
+							<p class="text-right md-body-1">alexwohlbruck@gmail.com</p>
+						</md-list-item>
+						<md-list-item>
+							<p>Recovery phone</p>
+							<!-- <md-input-container md-no-float> -->
+								<input ng-model="settings.phone" type="text" placeholder="Phone Number">
+							<!-- </md-input-container> -->
+						</md-list-item>
+						<md-list-item>
+							<p>Two-step authentication</p>
+							<md-switch class="md-secondary" ng-model="setting.auth"></md-switch>
+						</md-list-item>
+						<md-list-item>
+							<p>Reset password</p>
+							<md-button class="md-secondary md-raised md-accent" ng-model="setting.auth">Reset</md-button>
+						</md-list-item>
+						<md-list-item>
+							<p>Delete account</p>
+							<md-button class="md-secondary md-raised md-warn" ng-model="setting.auth">Delete</md-button>
+						</md-list-item>
+				</md-list>
+			</md-card>
+			<md-card>
+				<md-list>
+					<md-subheader class="md-no-sticky">Experimental</md-subheader>
+						<md-list-item>
+							<p>Change avatar</p>
+							<!-- <md-input-container md-no-float> -->
+								<input ng-model="settings.photo" type="text" placeholder="https://imgur.com/XtGnc70.png">
+							<!-- </md-input-container> -->
+						</md-list-item>
+						<md-list-item>
+							<p>Change avatar</p>
+							<!-- <md-input-container md-no-float> -->
+								<input ng-model="settings.cover" type="text" placeholder="https://imgur.com/wUDfBEA.png">
+							<!-- </md-input-container> -->
+						</md-list-item>
+						<md-list-item>
+							<p>Dark theme</p>
+							<md-switch class="md-secondary" ng-model="setting.theme"></md-switch>
+						</md-list-item>
+				</md-list>
+		</md-card>
+	</div>
+</div>

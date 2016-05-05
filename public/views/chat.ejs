@@ -1,0 +1,10 @@
+<div ng-repeat="message in messages">
+    {{message.message}}
+</div>
+
+<form ng-submit="sendMessage(messageForm.message)">
+    <input type="text" ng-model="messageForm.message" ng-keypress="isTyping()">
+    <button type="submit">Send</button>
+    
+    <span ng-if="typing">A user is typing</span>
+</form>
