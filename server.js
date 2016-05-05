@@ -36,7 +36,7 @@ app.set('views', __dirname + '/public/views');
 app.set('view engine', 'ejs');
 
 // required for passport
-app.use(expressSession({ secret:'yNI#VJNNJBOPNgo*iDCLC0F^JQ78mgshq6HSMC476e#Y9hG2gwx!3V&%ob7euLbp8z4fWxNRvcr*4MKC$G43Hcdx3&YyQ^bks#qD@wBrQ&Iauc^09SNMpnDf4Cbd1OquZyFpNXBlYJ72r^f3Z*wCjDcF%zELE7y3vdWVJz0lk#5AMKa$imrI$DumbasFckp#SrB7sH&f9faZ0s2Ao*VzVpaEvS^xVaQwOavRB#w!p6!74fUkC@fsAKNVd3@5Q&8uyg34eQ8J@g5K'})); // session secret
+app.use(expressSession({ secret:'you dont need to know'})); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
